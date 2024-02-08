@@ -120,7 +120,7 @@ function renderPokemonInfo(){
     <div>
         <div class="top-left-box"></div>
         <div class="arrow-heart">
-            <img src="./img/arrow_left.png" style="width:50px;cursor:pointer;z-index:99;" onclick="goBack()">
+            <img class="arrow" src="./img/arrow_left.png" style="width:50px;cursor:pointer;z-index:99;" onclick="goBack()">
             <i class="fa-regular fa-heart" style="color: #fff;font-size:40px;"></i>
         </div>
         <div class="name-id">
