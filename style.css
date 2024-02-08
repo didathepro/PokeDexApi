@@ -136,9 +136,10 @@ nav li:hover {
 }
 
 #wrapper {
-    width:80%;
-    margin-left:100px;
-    margin-bottom:150px;
+    margin:50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .pokeMainContainer {
@@ -181,7 +182,7 @@ nav li:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:10px;
+    gap:20px;
 }
 
 .miniContainer h4 {
