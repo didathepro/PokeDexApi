@@ -20,8 +20,9 @@
         width: 95px;
     }
     #pokemonImg {
-        width:45%;
-        top:48%;
+        width:50%;
+        top:50%;
+        right:26%;
     }
     .arrow-heart {
         padding:0;
