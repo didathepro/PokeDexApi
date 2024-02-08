@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body onload="init()">
+    <div class="loader"></div>
+
+    <header>
+        <h1>PokéDex</h1>
+        <div style="display:flex;flex-direction: column;justify-content: center;align-items: center;">
+        <input type="text" class="input-field" id="searchPokemon" onkeyup = "filterPokemons()" placeholder = "Search Pokemon">
+        <ul class= "ul-menu" id="list">
+
+        </ul>
+        <button class="button-9" role="button" onclick="searchPokemon()">Submit</button>
+        </div>
+    </header>
+    <div id="default-content"><div id="pokemonsContainer"></div></div>
+    <div id="wrapper" class="d-none">
+
+        <div id="pokedex"><h1 id="pokemonName"></h1></div>
+        
+        <div id="info-container" class="info-container">
+            
+            
+        </div>
+        <img id="pokemonImg">
+        <div id="info-stats"></div>
+    </div>
+    
+<script>
+    //Remove suggested elements if the field is empty
+    const input = document.querySelector('input');
+    input.addEventListener('keyup', (evt) => {
+  // Validate input
+    if (evt.target.value.trim().length === 0) {
+        document.getElementById('list').innerHTML = '';
+    // Field is empty
+    // Remove suggested elements or take appropriate action
+    
+  }
+});
+</script>
+</body>
+</html>
