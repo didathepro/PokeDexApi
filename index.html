@@ -17,13 +17,15 @@
 
     <header>
         <h1>PokéDex</h1>
-        <div style="display:flex;flex-direction: column;justify-content: center;align-items: center;">
-        <input type="text" class="input-field" id="searchPokemon" onkeyup = "filterPokemons()" placeholder = "Search Pokemon">
-        <ul class= "ul-menu" id="list">
+        <div style="display:flex;flex-direction: row;justify-content: center;align-items: center;position: relative;">
+            
+                <input type="text" class="input-field" id="searchPokemon" onkeyup = "filterPokemons()" placeholder = "Search Pokemon">
+                <ul class= "ul-menu" id="list">
 
-        </ul>
-        <button class="button-9" role="button" onclick="searchPokemon()">Submit</button>
+                </ul>
+                <button class="button-9" role="button" onclick="searchPokemon()">Submit</button>
         </div>
+        
     </header>
     <div id="default-content"><div id="pokemonsContainer"></div></div>
     <div id="wrapper" class="d-none">
