@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
 
 let currentPokemon;
-let names = [];
+let myArray =[];
 
 async function init (){
 
@@ -22,12 +22,17 @@ async function init (){
     currentPokemon = await response.json();
 
     let pokemonArray = currentPokemon.results;
-    
+    myArray = [...pokemonArray];
+    myArray.forEach((item)=> {
+        const {name,url} = item;
+    })
+
+    console.log(myArray);
     for (let index = 0; index < 100; index++) {
         const element = pokemonArray[index].name;
         
         const url = pokemonArray[index].url;
-        names.push({name:element, url:url});
+        
         const response = await fetch(url);
         currentPokemon = await response.json();
         
@@ -273,9 +278,9 @@ function filterPokemons() {
     const maxResults = 5; // Set the maximum number of results to display
     let resultsCount = 0; // Initialize the count of displayed results
 
-    for (let index = 0; index < names.length && resultsCount < maxResults; index++) {
-        let name = names[index].name;
-        let id = (names[index].url).slice(-3).replaceAll('/', '');
+    for (let index = 0; index < myArray.length && resultsCount < maxResults; index++) {
+        let name = myArray[index].name;
+        let id = (myArray[index].url).slice(-3).replaceAll('/', '');
         
         if (name.toLowerCase().startsWith(search)) {
             list.innerHTML += `<li class="suggested-name" onclick="loadPokemon(${id})">${name}</li>`;
